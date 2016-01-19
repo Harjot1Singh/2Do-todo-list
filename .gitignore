@@ -1,0 +1,2 @@
+# Stop .orig files being committed
+*.orig
