@@ -3,16 +3,81 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Login</title>
+	<title>Register</title>
 </head>
 
 <body>
 	<div class="container">
-		<div class="login">
-			<form action="login.html">
-				<input name="username">
-				<input type="password" name="user_password">
-				<input type="submit" value="Register!">
+		<nav class="navigation">
+			<ul>
+				<li>
+					<a href="login.html">Login</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="register">
+			<h1>Register</h1>
+			<form action="register.html">
+				<div class="register-input">
+					First Name:
+					<input type="text" name="firstname">
+				</div>
+				<div class="register-input">
+					Surname:
+					<input type="text" name="surname">
+				</div>
+				<div class="register-input">
+					Date of Birth:
+					<input type="date" name="dob">
+				</div>
+				<div class="register-input">
+					Email Address:
+					<input type="email" name="email">
+				</div>
+				<div class="register-input">
+					Confirm Email Address:
+					<input type="text" name="confirmEmail">
+				</div>
+				<div class="register-input">
+					Password:
+					<input type="password" name="password">
+				</div>
+				<div class="register-input">
+					Confirm Password:
+					<input type="password" name="confirmPassword">
+				</div>
+				<div class="register-dropdown">
+					Security Question:
+					<select name="question">
+						<option value="maiden-name">
+							What is your mother's maiden name? 
+						</option>
+						<option value="pet-name">
+							What was the name of your first pet? 
+						</option>
+						<option value="parents-meet">
+							In what city did your parents first meet?
+						</option>
+						<option value="dream-job">
+							What is your dream job? 
+						</option>
+						<option value="favourite-teacher">
+							What is the name of your favourite teacher? 
+						</option>
+						<option value="favourite-team">
+							What is the name of your favourite sports team? 
+						</option>
+					</select>
+				</div>
+				<div class="register-input">
+					<input type="text" name="answer">
+				</div>
+				<div class="register-submit">
+					<input type="submit" value="Register!">
+				</div>
 			</form>
 		</div>
 	</div>

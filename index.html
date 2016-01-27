@@ -3,11 +3,150 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Login</title>
+	<title>2Do</title>
+	<!--Font Awesome-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" charset="utf-8">
+	<!--Our CSS-->
+	<link rel="stylesheet" href="css/main.css" type="text/css" charset="utf-8">
 </head>
 
 <body>
-
+	<div class="container">
+		<nav class="navigation">
+			<ul>
+				<li class="active">
+					<a href="index.html">Lists</a>
+				</li>
+				<li>
+					<a href="profile.html">Profile</a>
+				</li>
+				<li>
+					<a href="map.html">Map</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="">Sign out</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="lists">
+			<h1>Lists</h1>
+			<!--Example List-->
+			<ul>
+				<li>
+					<div class="lists-list">
+						<h2>List Name</h2>
+						<div class="lists-list-actions">
+							<span class="lists-list-actions-add">
+								<a href="">Add item</a>
+							</span>
+							<span class="lists-list-actions-share">
+								<a href="">Share List</a>
+							</span>
+							<span class="lists-list-actions-sort">
+								<a href="">Sort List</a>
+							</span>
+							<!--Share Dialog - Separate -->
+							<div class="lists-list-actions-share-dialog">
+								<h4>Currently shared with:</h4>
+								<div class="lists-list-actions-share-dialog-people">
+									<table>
+										<tr>
+											<td>Harjot Singh</td>
+											<td>H.Singh.4@warwick.ac.uk</td>
+											<td>
+												<span class="lists-list-actions-share-dialog-person-delete">
+													<a href="">Delete</a>
+												</span>
+											</td>
+										</tr>
+									</table>
+									<div class="lists-list-actions-share-dialog-add">
+										<input type="email" name="email">
+										<a href="">Add</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lists-list-items">
+							<ul>
+								<li>
+									<div class="lists-list-items-item">
+										<h3>Item Name</h3>
+										<div class="lists-list-items-item-actions">
+											<span class="lists-list-items-item-actions-done">
+												<input type="checkbox" name="done" value="done">
+											</span>
+											<span class="lists-list-items-item-actions-priority">
+												<a href="">Star</a>
+											</span>
+											<span class="lists-list-items-item-actions-files">
+												<a href="">Files</a>
+											</span>
+											<span class="lists-list-items-item-actions-due">
+												<input type="date" name="due">
+											</span>
+											<span class="lists-list-items-item-actions-location">
+												<a href="">Location</a>
+											</span>
+										</div>
+										<div class="lists-list-items-item-tags">
+											<span class="lists-list-items-item-tags-tag">
+												Household
+											</span>
+											<span class="lists-list-items-item-tags-tag">
+												School
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="lists-list-completed">
+							<div class="lists-list-completed-bar">
+								<a href="">Show Completed Items</a>
+							</div>
+							<ul>
+								<li>
+									<div class="lists-list-completed-item">
+										<h3>Completed Item Name</h3>
+										<div class="lists-list-completed-item-actions">
+											<span class="lists-list-completed-item-actions-done">
+												<input type="checkbox" name="done" value="done">
+											</span>
+											<span class="lists-list-completed-item-actions-priority">
+												<a href="">Star</a>
+											</span>
+											<span class="lists-list-completed-item-actions-files">
+												<a href="">Files</a>
+											</span>
+											<span class="lists-list-completed-item-actions-due">
+												<!--IE and Firefox need shim-->
+												<input type="date" name="due">
+											</span>
+											<span class="lists-list-completed-item-actions-location">
+												<a href="">Location</a>
+											</span>
+										</div>
+										<div class="lists-list-completed-item-tags">
+											<span class="lists-list-items-item-tags-tag">
+												Household
+											</span>
+											<span class="lists-list-completed-item-tags-tag">
+												School
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
 </body>
 
 </html>

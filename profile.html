@@ -4,16 +4,76 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title>
+	<!--Font Awesome-->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" charset="utf-8">
+	<!--Our CSS-->
+	<link rel="stylesheet" href="css/main.css" type="text/css" charset="utf-8">
 </head>
 
 <body>
 	<div class="container">
-		<div class="login">
-			<form action="login.html">
-				<input name="username">
-				<input type="password" name="user_password">
-				<input type="submit" value="Register!">
-			</form>
+		<nav class="navigation">
+			<ul>
+				<li>
+					<a href="index.html">Lists</a>
+				</li>
+				<li class="active">
+					<a href="profile.html">Profile</a>
+				</li>
+				<li>
+					<a href="map.html">Map</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="">Sign out</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="profile">
+			<h1>Your Profile</h1>
+			<div class="profile-social">
+				<h2>Link your social media accounts</h2>
+				<span class="profile-social-facebook">
+					<a href="#fbLink">F</a>
+				</span>
+				<span class="profile-social-twitter">
+					<a href="#fbLink">T</a>
+				</span>
+				<span class="profile-social-github">
+					<a href="#fbLink">G</a>
+				</span>
+				<span class="profile-social-google">
+					<a href="#fbLink">G+</a>
+				</span>
+				<span class="profile-social-warwick">
+					<a href="#fbLink">W</a>
+				</span>
+			</div>
+			<div class="profile-resetPassword">
+				<a href="#resetPassword">Reset your password</a>
+			</div>
+			<div class="profile-background">
+				Select background image:
+				<input type="file" name="background" id="background">
+				<input type="submit" value="Upload Image" name="submit">
+			</div>
+			<div class="profile-mobile">
+				<h2>Verify phone number</h2>
+				<div class="profile-mobile-text">
+					Mobile Number:
+					<input type="text" name="number">
+				</div>
+				<div class="profile-mobile-verify">
+					<a href="#verify">Verify </a>
+				</div>
+			</div>
+			<div class="profile-notifications">
+				<h2>Select your notification preferences</h2>
+				<input type="checkbox" name="email" value="email">Receive Emails
+				<input type="checkbox" name="sms" value="sms">Receive SMS
+			</div>
 		</div>
 	</div>
 </body>
