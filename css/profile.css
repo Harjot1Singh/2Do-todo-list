@@ -1,11 +1,11 @@
-/*Login Page*/
+/*Profile Page*/
 
-.login {
+.profile {
     width: 500px;
     padding: 20px;
     position: relative;
     margin: auto;
-    top: 20vh;
+    top: 10vh;
     border-radius: 15px;
     text-align: center;
     background: rgba(255, 255, 255, 0.88);
@@ -14,26 +14,21 @@
     box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 1);
 }
 
-.login h1 {
-    margin: 0;
-}
-
-.login hr {
+.profile hr {
     border: none;
     border-top: 1px solid #8c8b8b;
     text-align: center;
     margin-top: 20px;
 }
 
-
 /*Social Media Icons*/
 
-.login-social span {
+.profile-social span {
     font-size: 50px;
     margin-right: 20px;
 }
 
-.login-social i {
+.profile-social i {
     width: 65px;
     height: 55px;
     padding-top: 10px;
@@ -46,12 +41,12 @@
 
 /*Facebook*/
 
-.login-social-facebook i {
+.profile-social-facebook i {
     background-color: #3a579d;
     color: white;
 }
 
-.login-social-facebook i:hover {
+.profile-social-facebook i:hover {
     background-color: white;
     color: #3a579d;
 }
@@ -59,12 +54,12 @@
 
 /*Twitter*/
 
-.login-social-twitter i {
+.profile-social-twitter i {
     background-color: #5ea9dd;
     color: white;
 }
 
-.login-social-twitter i:hover {
+.profile-social-twitter i:hover {
     color: #5ea9dd;
     background-color: white;
 }
@@ -72,7 +67,7 @@
 
 /*Github*/
 
-.login-social-github i {
+.profile-social-github i {
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 60px;
@@ -80,7 +75,7 @@
     color: white;
 }
 
-.login-social-github i:hover {
+.profile-social-github i:hover {
     color: black;
     background-color: white;
 }
@@ -88,13 +83,13 @@
 
 /*Google+*/
 
-.login-social-google i {
+.profile-social-google i {
     background-color: #dc4b3e;
     color: white;
     font-size: 45px;
 }
 
-.login-social-google i:hover {
+.profile-social-google i:hover {
     color: #dc4b3e;
     background-color: white;
 }
@@ -102,7 +97,7 @@
 
 /*Warwick*/
 
-.login-social-warwick i {
+.profile-social-warwick i {
     font-size: 35px;
     padding-left: 2px;
     padding-right: 2px;
@@ -112,19 +107,74 @@
     background-color: #5b3069;
 }
 
-.login-social-warwick i:hover {
+.profile-social-warwick i:hover {
     background-color: white;
     color: #5b3069;
 }
 
+/*Reset Password*/
 
-/*Login Form*/
+.profile-resetPassword {
+    padding: 2px;
+}
 
-.login-form-input {
+.profile-resetPassword a {
+    transition: all 0.30s ease-in-out;
+    padding: 3px;
+}
+
+.profile-resetPassword a:hover {
+    background-color: #1C263C;
+    border-radius: 10px;
+    color: white;
+}
+
+/*Background Image*/
+
+.profile-background {
+    padding: 8px;
+}
+
+.profile-background-submit input {
+    margin: 10px;
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #54ca72;
+    transition: all 0.30s ease-in-out;
+}
+
+.profile-background-submit input:hover {
+    background-color: #3CA55C;
+}
+
+/*Mobile*/
+
+.profile-mobile-verify {
+    padding: 8px;
+}
+
+.profile-mobile-verify a {
+    transition: all 0.30s ease-in-out;
+    padding: 3px;
+}
+
+.profile-mobile-verify a:hover {
+    background-color: #1C263C;
+    border-radius: 10px;
+    color: white;
+}
+
+.profile-mobile {
     padding: 10px;
 }
 
-.login-form-input input {
+.profile-mobile input {
     font-family: 'Montserrat', sans-serif;
     outline: none;
     padding: 10px;
@@ -137,48 +187,7 @@
     color: black;
 }
 
-.login-form-input input:focus,
+.profile-mobile input:focus,
 textarea:focus {
     border: 1px solid rgba(81, 200, 238, 1);
-}
-
-.login-form-submit input {
-    margin: 10px;
-    cursor: pointer;
-    width: 150px;
-    height: 40px;
-    border: 2px solid black;
-    border-radius: 25px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #54ca72;
-    transition: all 0.30s ease-in-out;
-}
-
-.login-form-submit input:hover {
-    background-color: #3CA55C;
-}
-
-.login-form-link {
-    padding: 5px;
-}
-
-.login-form-link a {
-    transition: all 0.30s ease-in-out;
-    padding: 3px;
-}
-
-.login-form-link a:hover {
-    background-color: #1C263C;
-    border-radius: 10px;
-    color: white;
-}
-
-.login-form-error p {
-    background-color: rgb(200, 0, 0);
-    background-color: rgba(200, 0, 0, 0.8);
-    padding: 5px;
-    border-radius: 10px;
-    color: white;
 }

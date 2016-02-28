@@ -1,3 +1,8 @@
+<?php
+include_once "common/access.php";
+if (loggedIn())
+	header("Location:index.php");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -47,26 +52,31 @@
 			<hr>
 			<h2>Or Email:</h2>
 			<div class="login-form">
-				<form action="login.html">
+				<form>
 					<div class="login-form-input">
 						<input type="email" name="email" placeholder="john.doe@gmail.com">
 					</div>
 					<div class="login-form-input">
 						<input type="password" name="password" placeholder="******">
 					</div>
+					<div class="login-form-error" hidden>
+						<p>Your email or password was not recognised. Try again?</p>
+					</div>
 					<div class="login-form-submit">
 						<input type="submit" value="Login">
 					</div>
 				</form>
 				<div class="login-form-link">
-					<a href="forgotPassword.html">Forgot your password?</a>
+					<a href="reset.php">Forgot your password?</a>
 				</div>
 				<div class="login-form-link">
-					<a href="register.html">Need to register?</a>
+					<a href="register.php">Need to register?</a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<?php include "footer.php" ?>
+	<script type="text/javascript" src="js/login.js"></script>
 </body>
 
 </html>

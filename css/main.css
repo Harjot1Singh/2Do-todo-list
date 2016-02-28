@@ -4,24 +4,122 @@
 @import url("icomoon.css");
 
 /*Body and Container*/
-
-body {
-    background: #3CA55C;
-    /* fallback for old browsers - no logo */
-    background: -webkit-linear-gradient(to left, #67ca44, #54ca72);
-    background: linear-gradient(to left, #67ca44, #54ca72);
-    background: url("../images/2do.png"), -webkit-linear-gradient(to left, #67ca44, #54ca72);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: url("../images/2do.png"), linear-gradient(to left, #4dca44, #14ca72);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 .container {
+    background: #3CA55C;
+    /* fallback for old browsers - no logo */
+    background: -webkit-linear-gradient(to left, #4dca44, #14ca72);
+    background: linear-gradient(to left, #ff704d, #ff4d4d);
+    background: linear-gradient(to left, #4dca44, #14ca72);
+    /*background: linear-gradient(to left, #4dca44, #14ca72);*/
     font-family: 'Montserrat', sans-serif;
     color: #1C263C;
+    height: 100%;
 }
 
 .container a {
     text-decoration: none;
     color: #1C263C;
+}
+
+.navigation {
+    border-bottom: 3px solid black;
+    text-align: center;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+}
+
+.navigation ul {
+    margin-top: 0;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.navigation li {
+    display: inline;
+    margin: 0;
+    font-size: 20px;
+}
+
+.navigation a {
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 11px;
+    width: 100%;
+    transition: all 0.30s ease-in-out;
+}
+
+.navigation a:hover {
+    color: white;
+    background-color: #1C263C;
+}
+
+
+
+/*For nav dropdown*/
+
+.navigation-dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.navigation-dropdown-content {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.navigation-dropdown-content a {
+    display: block;
+}
+
+.navigation-dropdown:hover a {
+    background-color: #1C263C;
+    color: white;
+}
+
+.navigation-dropdown:hover .navigation-dropdown-content {
+    display: block;
+    width: 88px;
+}
+
+.navigation-dropdown-content a:hover {
+    background-color: #386478;
+}
+
+
+/*Footer*/
+
+.footer {
+    position: relative;
+    float: right;
+    bottom: 50px;
+    padding-right: 10px;
+}
+
+.footer i {
+    text-align: center;
+    padding-right: 2px;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    transition: all 0.30s ease-in-out;
+    background-color: white;
+    color: #1C263C;
+}
+
+.footer i:hover {
+    background-color: #1C263C;
+    color: white;
 }

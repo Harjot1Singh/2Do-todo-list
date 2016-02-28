@@ -1,3 +1,8 @@
+<?php
+include_once "common/access.php";
+if (!loggedIn())
+	header("Location:login.php");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -14,20 +19,23 @@
 	<div class="container">
 		<nav class="navigation">
 			<ul>
-				<li>
-					<a href="index.html">Lists</a>
+				<li class="navigation-active">
+					<a href="index.php">Lists</a>
 				</li>
 				<li>
-					<a href="profile.html">Profile</a>
-				</li>
-				<li class="active">
-					<a href="map.html">Map</a>
+					<a href="map.php">Map</a>
 				</li>
 				<li>
 					<a href="about.html">About</a>
 				</li>
 				<li>
-					<a href="">Sign out</a>
+					<div class="navigation-dropdown">
+						<a href="#">&dArr; Profile </a>
+						<div class="navigation-dropdown-content">
+							<a href="profile.php">Settings</a>
+							<a href="">Logout</a>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</nav>
@@ -41,6 +49,7 @@
 			</div>
 		</div>
 	</div>
+		<?php include "footer.php" ?>
 </body>
 
 </html>

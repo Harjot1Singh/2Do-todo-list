@@ -1,0 +1,205 @@
+/*Lists container*/
+
+.lists {
+    margin-top: 50px;
+    cursor: move;
+    min-height: 80%;
+}
+
+
+/*Lists*/
+
+.lists ul {
+    list-style: none;
+}
+
+.lists li {
+    display: inline;
+}
+
+.lists-list {
+    vertical-align: middle;
+    display: inline-block;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    cursor: default;
+    margin: 20px;
+}
+
+.lists-list-title {
+    cursor: text;
+    text-align: center;
+    background-color: #1C263C;
+    color: white;
+    border-radius: 5px;
+}
+
+.lists-list-title h2 {
+    margin: 5px 0;
+    width: 270px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lists-list-actions {
+    display: inline-block;
+    width: 30%;
+    margin: 5px 0;
+    vertical-align: middle;
+}
+
+.lists-list-actions a {
+    color: white;
+    margin-left: 10px;
+    transition: ease-in-out 0.3s all;
+}
+
+.lists-list-actions a:hover {
+    color: orange;
+}
+
+.lists-list li {
+    display: inline;
+}
+
+
+/*List Items*/
+
+.lists-list-items {
+    padding-top: 10px;
+}
+
+.lists-list-items-item {
+    cursor: pointer;
+    padding: 10px;
+    margin: 7px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid #1C263C;
+}
+
+.lists-list-items ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lists-list-items-item {
+    padding: 10px;
+    margin: 7px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid #1C263C;
+}
+
+.lists-list-items-item h3 {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    margin: 0;
+}
+
+.lists-list-items-item h3:hover {
+    text-decoration: line-through;
+}
+
+
+/*List Actions*/
+
+.lists-list-items-item-actions {
+    display: inline-block;
+}
+
+.lists-list-items-item-actions a {
+    transition: ease-in-out 0.3s all;
+    font-size: 2em;
+    padding-right: 5px;
+    margin-bottom: 20px;
+}
+
+.lists-list-items-item-actions-priority a:hover {
+    background-color: #1C263C;
+    border-radius: 25px;
+    color: yellow;
+}
+
+.lists-list-items-item-actions-location a:hover {
+    background-color: #1C263C;
+    border-radius: 25px;
+    color: red;
+}
+
+.lists-list-items-item-actions-files a:hover {
+    background-color: #1C263C;
+    border-radius: 25px;
+    color: white;
+}
+
+.lists-list-items-item-actions-due {}
+
+.lists-list-items-item-actions-due input {
+    width: 200px;
+    border: 1px solid black;
+    height: 20px;
+}
+
+
+/*::-webkit-datetime-edit {display: none;}*/
+
+
+/*::-webkit-inner-spin-button {display: none;}*/
+
+::-webkit-calendar-picker-indicator {
+    padding: 0;
+    margin: 0;
+    color: red;
+    display: inline-block;
+    visibility: visible;
+    overflow: visible;
+    display: -webkit-inline-flex;
+}
+
+.lists-list-items-item-actions-done input {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+
+/*Completed Items*/
+
+.lists-list-completed-bar a {
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    background-color: white;
+    color: grey;
+    transition: ease-in-out 0.3s all;
+}
+
+.lists-list-completed-bar a:hover {
+    background-color: #1C263C;
+    color: white;
+}
+
+.lists-new {
+    display: inline-block;
+    width: 400px;
+    margin: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.lists-new a {
+    color: white;
+    transition: ease-in-out 0.3s all;
+    font-size: 150px;
+}
+
+.lists-new a:hover {
+    color: #1C263C;
+}
