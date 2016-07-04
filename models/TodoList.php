@@ -5,7 +5,7 @@
  * the User class.
 **/ 
 
-include_once __DIR__ . "../common/helpers.php";
+include_once __DIR__ . "/../common/helpers.php";
 
 
 class TodoList {
@@ -157,7 +157,8 @@ class TodoList {
     // Adds an item to the list, returning itemID
     public function addItem($name, $due, $longitude, $latitude) {
         // Add to DB and cache
-        $this->items[] = new Item($this->getListID(), $listID, $name, $due, $longitude, $latitude);
+        $item =  new Item(null, $this->getListID(), $name, $due, $longitude, $latitude);
+        return $item;
     }
     
     // Deletes an item from the list

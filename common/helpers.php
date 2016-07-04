@@ -46,7 +46,7 @@ function getJSON() {
 // Checks for non-null property strings on an object
 function hasStrings($obj, $properties) {
     foreach ($properties as $property) {
-        if (!isset($obj->$property) || $obj->$property === "")
+        if (!isset($obj->$property))
             return false;
     }
     return true;

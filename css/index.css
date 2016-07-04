@@ -18,7 +18,7 @@
 }
 
 .lists-list {
-    vertical-align: middle;
+    vertical-align: top;
     display: inline-block;
     width: 400px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -38,29 +38,54 @@
     border-radius: 5px;
 }
 
-.lists-list-title h2 {
+.lists-list-title-heading h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.lists-list-title-heading {
     margin: 5px 0;
-    width: 270px;
+    width: 230px;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
 }
 
+.lists-list-title input[name=listName] {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2px;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid black;
+    text-align: center;
+    width: 200px;
+    height: 20px;
+    font-size: 20px;
+    color: black;
+}
+
 .lists-list-actions {
     display: inline-block;
-    width: 30%;
+    width: 40%;
     margin: 5px 0;
     vertical-align: middle;
+    text-align: right;
 }
 
 .lists-list-actions a {
     color: white;
-    margin-left: 10px;
+    margin-left: 7px;
+    margin-right: 3px;
     transition: ease-in-out 0.3s all;
 }
 
 .lists-list-actions a:hover {
     color: orange;
+}
+
+.lists-list-actions-delete a:hover {
+    color: red;
 }
 
 .lists-list li {
@@ -96,15 +121,28 @@
     border: 2px solid #1C263C;
 }
 
-.lists-list-items-item h3 {
+.lists-list-items-item-name {
     display: inline-block;
     text-align: center;
+    cursor: text;
     width: 200px;
     margin: 0;
 }
 
-.lists-list-items-item h3:hover {
-    text-decoration: line-through;
+.lists-list-items-item input[name=itemName] {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 7px;
+    margin-right: 4px;
+    margin-bottom: 6px;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid black;
+    text-align: center;
+    width: 172px;
+    height: 23px;
+    font-size: 20px;
+    color: black;
 }
 
 
@@ -121,56 +159,125 @@
     margin-bottom: 20px;
 }
 
+.lists-list-items-item-actions-due-datepicker {
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+/* Datepicker */
+
+.ui-datepicker {
+    display: none;
+    width: 220px;
+    border-radius: 15px;
+    border: 4px solid #1C263C;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: 'Montserrat', sans-serif;
+    color: #1C263C;
+}
+
+
+/*Datepicker table */
+
+.ui-datepicker-calendar {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-datepicker-prev {
+    float: left;
+    cursor: pointer;
+}
+
+.ui-datepicker-next {
+    float: right;
+    cursor: pointer;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+}
+
+.ui-datepicker-calendar a {
+    color: #1C263C;
+    text-decoration: none;
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+
+.ui-datepicker table{
+    table-layout: fixed;
+}
+
+.ui-datepicker td {
+    overflow: hidden;
+    width: 26px;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background-color: #1C263C;   
+    border-radius: 7px;
+    color: white;   
+}
+
+.ui-datepicker-unselectable {
+    opacity: 0;
+}
+
 .lists-list-items-item-actions-priority a:hover {
-    background-color: #1C263C;
-    border-radius: 25px;
-    color: yellow;
+    color: olive;
 }
 
 .lists-list-items-item-actions-location a:hover {
-    background-color: #1C263C;
-    border-radius: 25px;
-    color: red;
+    color: darkred;
 }
 
-.lists-list-items-item-actions-files a:hover {
-    background-color: #1C263C;
-    border-radius: 25px;
-    color: white;
+.lists-list-items-item-actions-delete a:hover {
+    color: rgb(200, 0, 0);
 }
 
-.lists-list-items-item-actions-due {}
-
-.lists-list-items-item-actions-due input {
-    width: 200px;
-    border: 1px solid black;
-    height: 20px;
+.lists-list-items-item-actions-done a:hover {
+    color: green;
 }
 
-
-/*::-webkit-datetime-edit {display: none;}*/
-
-
-/*::-webkit-inner-spin-button {display: none;}*/
-
-::-webkit-calendar-picker-indicator {
-    padding: 0;
-    margin: 0;
-    color: red;
-    display: inline-block;
-    visibility: visible;
-    overflow: visible;
-    display: -webkit-inline-flex;
+.lists-list-items-item-actions-due a:hover {
+    color: rgb(0, 0, 150);
 }
 
-.lists-list-items-item-actions-done input {
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
+.lists-list-items-item-actions-done.toggled a {
+    color: green;
+}
+
+.lists-list-items-item-actions-priority.toggled a {
+    color: olive;
 }
 
 
 /*Completed Items*/
+
+.lists-list-completed .lists-list-items-item-name h3 {
+    text-decoration: line-through;
+}
+
+.lists-list-completed .lists-list-items-item-actions-done a {
+    color: green;
+}
+
+.lists-list-completed .lists-list-items-item-actions-done a:hover {
+    color: #1C263C;
+}
+
+.lists-list-completed ul {
+    list-style: none;
+    padding: 0;
+}
 
 .lists-list-completed-bar a {
     border-radius: 5px;
@@ -188,6 +295,7 @@
 
 .lists-new {
     display: inline-block;
+    vertical-align: middle;
     width: 400px;
     margin: 20px;
     text-align: center;

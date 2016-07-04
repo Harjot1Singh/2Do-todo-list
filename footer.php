@@ -1,5 +1,5 @@
 	<footer class="footer">
-		<a href="about.html">
+		<a href="about.php">
 			<i class="fa fa-question"></i>
 		</a>
 	</footer>

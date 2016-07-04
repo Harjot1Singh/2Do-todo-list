@@ -55,6 +55,9 @@ if (loggedIn())
 						</span>
 						<input type="password" name="confirmPassword" placeholder="Confirm Password">
 					</div>
+					<div class="register-form-error" hidden>
+						<p>Your email or password was not recognised. Try again?</p>
+					</div>
 					<div class="register-form-submit">
 						<input type="submit" value="Register!">
 					</div>

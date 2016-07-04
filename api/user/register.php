@@ -9,7 +9,6 @@ include __DIR__ . "/../../common/helpers.php";
 $json = getJSON();
 
 $success = false;
-$userID = null;
 
 // If the JSON contains the non-empty properties, add an account
 if (hasStrings($json, ["name", "email", "password"])) {
@@ -18,13 +17,11 @@ if (hasStrings($json, ["name", "email", "password"])) {
     $password = $json->password;
     $user = new User();
     // Check login and return response
-    $user->create($name, $email, $password);
-    $success = true;
-    $userID = $user->getUserID();
+    $success = $user->create($name, $email, $password);
 }
 $response = array(
     "success" => $success,
-    "id" => $userID
+    "id" => $user->getUserID()
     );
 
 echo json_encode($response);

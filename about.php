@@ -13,13 +13,7 @@
 
 <body>
 	<div class="container">
-		<nav class="navigation">
-			<ul>
-				<li>
-					<a href="index.php">Lists</a>
-				</li>
-			</ul>
-		</nav>
+		<?php include "nav.php" ?>
 		<div class="about">
 			<div class="about-what">
 				<h1>What is this?</h1>
@@ -27,11 +21,7 @@
 				<ul>
 					<li>Social Media Login</li>
 					<li>Multiple Lists</li>
-					<li>Attachments/Files</li>
 					<li>Due Dates/Priority</li>
-					<li>Notifications</li>
-					<li>Export Lists</li>
-					<li>Geolocated Items</li>
 				</ul>
 			</div>
 			<div class="about-why">

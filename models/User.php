@@ -29,7 +29,7 @@ class User {
 	    return $this->userID;
 	}
 	
-	// Creates a new user, and sets userID
+	// Creates a new user, and sets userID. ALLOWS FOR DUPLICATE EMAIL
 	public function create($name, $email, $password) {
         // Produce hashed + salted password
 	    $hashed_password = $this->generateHash($password);
@@ -42,6 +42,7 @@ class User {
         // Finally set userID
         $this->userID = $this->db->lastRowID();
         $_SESSION["user"] = $this->getUserID();
+        return true;
 	}
 	
 	// Returns true if OAuth login to Facebook was successful
@@ -171,20 +172,40 @@ class User {
         return $this->lists;
 	}
 	
+	// Gets a list for the user, returns false if user doesn't have access to it
+	public function getList($listID) {
+		// Check cache
+		//if (isset($this->lists))
+		//	return $this->lists;
+		// Otherwise pull from DB
+		$stmt = $this->db->prepare("SELECT 1 FROM userlists WHERE userID = :userID AND listID = :listID");
+        $stmt->bindValue(":userID", $this->getUserID(), SQLITE3_INTEGER);
+        $stmt->bindValue(":listID", $listID, SQLITE3_INTEGER);
+        $results = $stmt->execute();
+        // "Cache" each list
+        $this->lists = array();
+        $row = $results->fetchArray();
+        if ($row) {
+            $list = new TodoList(null,null, $listID);
+            return $list;
+        } else
+            return false;
+	}
+	
 	// Adds a new list for the user
     public function addList($name) {
         // Add to DB
         $list = new TodoList($this->getUserID(), $name, null);
         // Cache it
-        $this->lists[$list->getListID()] = $list;
+        $listID = $list->getListID();
+        $this->lists[$listID] = $list;
+        return $listID;
     }
     
 	// Deletes a list for the user
     public function deleteList($listID) {
-        // Delete from DB
-        $this->list[$listID]->delete();
-        // And from cache
-        unset($this->lists[$listID]);
+        $list = new TodoList(null, null, $listID);
+        $list->delete();
     }
 
 }

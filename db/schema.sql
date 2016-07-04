@@ -5,7 +5,7 @@ CREATE TABLE users (
 	password text,
 	phone text,
 	verifyCode text,
-	background text
+	background text,
 );
 
 CREATE TABLE lists (

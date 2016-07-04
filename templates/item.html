@@ -1,17 +1,23 @@
 <li>
     <div class="lists-list-items-item">
-        <h3></h3>
+        <div class="lists-list-items-item-name">
+            <h3>Name</h3>
+        </div>
+        <input hidden type="text" placeholder="Item Name" name="itemName">
         <div class="lists-list-items-item-actions">
-            <span class="lists-list-items-item-actions-due">
-												<a href=""><i class="fa fa-calender"></i></a>
-												<input type="date" name="due">
-											</span>
-            <span class="lists-list-items-item-actions-location">
-												<a href=""><i class="fa fa-map-marker"></i></a>
-											</span>
+            <span class="lists-list-items-item-actions-done">
+				<a href=""><i class="fa fa-check"></i></a>
+			</span>
             <span class="lists-list-items-item-actions-priority">
-												<a href=""><i class="fa fa-star"></i></a>
-											</span>
+				<a href=""><i class="fa fa-star"></i></a>
+			</span>
+            <span class="lists-list-items-item-actions-due">
+				<input class="lists-list-items-item-actions-due-datepicker" name="date" type="text">
+				<a href=""><i class="fa fa-calendar"></i></a>
+			</span>
+            <span class="lists-list-items-item-actions-delete">
+				<a href=""><i class="fa fa-trash"></i></a>
+			</span>
         </div>
     </div>
 </li>

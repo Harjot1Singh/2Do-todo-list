@@ -20,7 +20,7 @@ class Item {
             $stmt = $this->db->prepare("INSERT INTO items VALUES (NULL, :listID, :item, :due, 0, :longitude, :latitude, 0)");
             $stmt->bindValue(":listID", $listID, SQLITE3_INTEGER);
             $stmt->bindValue(":name", $name, SQLITE3_TEXT);
-            $stmt->bindValue(":due", $due, SQLITE3_DATETIME);
+            $stmt->bindValue(":due", $due, SQLITE3_TEXT);
             $stmt->bindValue(":longitude", $longitude, SQLITE3_TEXT);
             $stmt->bindValue(":latitude", $latitude, SQLITE3_TEXT);
             $stmt->execute();
@@ -45,7 +45,7 @@ class Item {
         $stmt->bindValue(":itemID", $this->getItemID(), SQLITE3_INTEGER);
         $stmt->execute();
         // Delete item
-        $stmt = $this->db->prepare("DELETE FROM items WHERE item = :itemID");
+        $stmt = $this->db->prepare("DELETE FROM items WHERE id = :itemID");
         $stmt->bindValue(":itemID", $this->getItemID(), SQLITE3_INTEGER);
         $stmt->execute();
         // Clear variables here
@@ -58,7 +58,7 @@ class Item {
         $stmt = $this->db->prepare("UPDATE items SET name = :name, due = :due, urgent = :urgent, longitude = :longitude, latitude = :latitude, completed = :completed WHERE id = :itemID");
         $stmt->bindValue(":itemID", $this->getItemID(), SQLITE3_INTEGER);
         $stmt->bindValue(":name", $name, SQLITE3_TEXT);
-        $stmt->bindValue(":due", $due, SQLITE3_DATETIME);
+        $stmt->bindValue(":due", $due, SQLITE3_TEXT);
         $stmt->bindValue(":longitude", $longitude, SQLITE3_TEXT);
         $stmt->bindValue(":latitude", $latitude, SQLITE3_TEXT);
         $stmt->bindValue(":completed", $completed, SQLITE3_INTEGER);
@@ -72,7 +72,7 @@ class Item {
         $stmt->bindValue(":itemID", $this->getItemID(), SQLITE3_INTEGER);
         $results = $stmt->execute();
         // Get one row
-        $row = $results->fetchArray();
+        $row = $results->fetchArray(SQLITE3_ASSOC);
         return $row;
     }
     
