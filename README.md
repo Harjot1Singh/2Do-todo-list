@@ -1,4 +1,4 @@
-# cs139-todo-list
+# 2Do-todo-list
 Trello-style Todo List Web App for Warwick's CS139 Module, written in PHP, HTML, JS, CSS.
 
 # Requirements
